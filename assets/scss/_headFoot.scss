@@ -1,0 +1,79 @@
+/* SECTION MENU AREA */
+
+/* SECTION BANNER AREA */
+.banner-area {
+	position: relative;
+	.banner {
+		position: relative;
+		top: 0;
+		z-index: var(--z-back);
+		width: 100%;
+		height: 100%;
+		img{
+			height: 250px;
+			display: block;
+			@include fromin(md) {
+				height: auto;
+			}
+		}
+	}
+	.banner-title {
+		position: absolute;
+		bottom: 2rem;
+		width: 100%;
+		font: normal 800 1.5rem/1rem var(--font-2);
+		z-index: var(--z-fixed);
+	}
+}
+
+/* SECTION MOVIE AREA */
+.movie{
+	position: relative;
+	video.video-agencia {
+		height: 100vh;
+		width: 100%;
+		object-fit: cover;
+		display: block;
+	}
+	.movie_text {
+		width: 100%;
+		position: absolute;
+		bottom: 1.7rem;
+		h1, h2 {
+			font-size: 3.7rem;
+			margin-bottom:1.5rem;
+			line-height: 3.7rem;
+			@include from(sm){
+				font-size: 2.5rem;
+				margin-bottom: 0.8rem;
+				line-height: 2.5rem;
+			}
+		}
+		p {
+			font-size: 1.5rem;margin: 1rem 0;
+			@include from(sm){
+				font-size: 1rem;
+				margin-top: 0.5rem;
+				line-height: 1rem;
+			}
+		}
+		h1, h2, p {			
+			display: block;
+			width: 100%;
+			//text-align: center;
+		}
+	}
+}
+
+/* OVERLAY PARA BANNER O MOVIE */
+.overlay {
+	background: #000;
+	display: block;
+	opacity: 1;//.8
+}
+
+/* SECTION FOOTER AREA */
+footer {
+    background: var(--primary-color);
+	padding: 1.5rem 0 0;
+}

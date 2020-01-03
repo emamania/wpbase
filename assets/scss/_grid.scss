@@ -1,0 +1,71 @@
+*,
+::before, ::after {
+    box-sizing: border-box;
+}
+:root {
+    --gap          : 1rem;
+    @include fromin(md) {
+        --gap       : 1.5rem;        
+    }
+}
+.emagrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: var(--gap);
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 15px 0;
+    max-width: 1124px;
+    & &, &-fluid {
+       width: 100%;
+       max-width: 100%;
+       margin-right: 0;
+       margin-left: 0;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+//Anchos personalizables hasta 1024px
+@for $i from 1 through 12 {
+    $reta: $i - 1;
+    .sm-grid-#{$i} {
+       grid-template-columns: repeat(#{$i}, calc((100% - var(--gap) * #{$reta}) / #{$i}));
+    }
+    .sm-cols-#{$i}{
+       grid-column-end: span #{$i};
+    }
+}
+@include fromin(md) {
+    @for $i from 1 through 12 {
+        $reta: $i - 1;
+        .md-grid-#{$i} {
+            grid-template-columns: repeat(#{$i}, calc((100% - var(--gap) * #{$reta}) / #{$i}));
+        }
+        .md-cols-#{$i}{
+            grid-column-end: span #{$i};
+        }
+    }
+}
+
+@include fromin (lg) { 
+    @for $i from 1 through 12 {
+       $reta: $i - 1;
+       .lg-grid-#{$i} {
+          grid-template-columns: repeat(#{$i}, calc((100% - var(--gap) * #{$reta}) / #{$i}));
+       }
+       .lg-cols-#{$i}{
+          grid-column-end: span #{$i};
+       }
+    }
+}
+@include fromin (xl) {
+    .emagrid {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
