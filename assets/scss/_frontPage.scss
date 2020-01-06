@@ -1,0 +1,27 @@
+.galery, .cat {
+    background: #fff!important;
+}
+/* GALERIA */
+.galery {
+
+}
+/* CATEGORIA */
+.cat {
+    .article {
+        display: block;
+        position: relative;
+        text-align: center;
+        img {
+            display: block;
+            width: 100%;
+        }
+        h2 {
+            background: #000;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            margin: 0 auto;
+            padding: .7rem 1rem;
+        }
+    }
+}

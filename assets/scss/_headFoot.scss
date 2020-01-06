@@ -1,5 +1,105 @@
 /* SECTION MENU AREA */
-
+.header-area {
+    width: 100%;
+    position: absolute;
+    z-index: var(--z-normal);
+    padding-top: 10px;
+    background: linear-gradient(to bottom, #00000059, #ffffff00);
+    @include fromin(961px) {
+        background: linear-gradient(to bottom, #00000059, #ffffff00);
+    }
+    .emagrid {
+        padding: 0;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        //align-items: center;
+        .toggle-button {
+            margin-left: auto;
+            display: none;
+            border: 1px solid var(--light);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            padding: .1rem 1rem;
+            border-radius: 5px;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            height: 42px;
+            &:hover {
+                color: var(--gray);
+            }
+        }
+        .navbar-nav {//ul
+            margin: 0;
+            display: flex;
+            list-style-type: none;
+            flex-direction: row;
+            justify-content: space-between;            
+            @include fromin(961px) {
+                padding-left: 1rem;
+                height: 35px;
+            }
+            .nav-link {//li
+                text-align: center;
+                transition: background .4s ease;
+                //padding: .5rem 1vw;
+                /* &:nth-child(5) {
+                    width: 170px;
+                } */
+                .link {
+                    display: block;
+                    padding: .5rem 1vw;
+                    transition: background .7 ease;
+                }
+                &:hover {
+                    background: var(--primary-color);
+                    .subnavbar-nav {
+                        display: block;
+                    }
+                }
+                .subnavbar-nav {//ul
+                    margin: 0;
+                    padding: 0;
+                    background: var(--yellow);
+                    display: none;
+                    li {
+                        list-style: none;
+                        a {
+                            display: block;
+                            padding: .5rem 1vw;
+                            color: var(--primary-color);
+                            &:hover {
+                                color: var(--light);
+                            }
+                        }
+                        &:hover {
+                            background: var(--primary-color_alt);
+                        }                        
+                    }
+                }
+            }
+        }
+        .collapse {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            .search {
+				margin-left: 1rem;
+			}
+        }
+        .nav-brand {
+            font: normal 700 1.1rem var(--font-mont);
+            height: 55px;
+            overflow: hidden;
+            img {
+                height: 65px;
+            }
+        }        
+    }
+}
 /* SECTION BANNER AREA */
 .banner-area {
 	position: relative;
