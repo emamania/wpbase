@@ -696,13 +696,27 @@ footer {
   display: block;
   position: relative;
   text-align: center; }
+  .cat .article a {
+    display: block; }
   .cat .article a img {
     display: block;
     width: 100%; }
-  .cat .article h2 {
-    background: #000;
+  .cat .article a:last-child h2 {
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: .7rem 1rem;
     position: absolute;
-    width: 100%;
     bottom: 0;
-    margin: 0 auto;
-    padding: .7rem 1rem; }
+    width: 100%;
+    color: var(--light);
+    font-weight: 500;
+    padding: .3rem 1rem;
+    text-align: center;
+    -webkit-transition: background .7s ease;
+    -o-transition: background .7s ease;
+    transition: background .7s ease;
+    font-weight: 600; }
+    .cat .article a:last-child h2:hover {
+      background: rgba(255, 255, 255, 0.5);
+      color: #000;
+      font-weight: 600; }
