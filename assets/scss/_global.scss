@@ -15,11 +15,33 @@ ul{
 a {
     text-decoration: none;
 }
+a {
+    color: #0f7faf;
+    text-decoration: underline
+}
+a:visited {
+    color: #0f7faf
+}
+a:hover,
+a:focus,
+a:active {
+    color: #363940
+}
+a:focus {
+    outline: thin dotted
+}
+a:hover,
+a:active {
+    outline: 0
+}
+
 p {
     line-height: 1.5rem;
     font-weight: normal;
 }
-
+section {
+    padding: 2rem 0 0;
+}
 .fluid {
     width: 100%;
     height: auto;

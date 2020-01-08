@@ -1,4 +1,4 @@
-.galery, .cat {
+.galery, .cat, .main-s {
     background: #fff!important;
 }
 /* GALERIA */
@@ -22,22 +22,69 @@
             h2 {
                 margin: 0;
                 background: rgba(0,0,0, .5);
-                padding: .7rem 1rem;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
                 color: var(--light);
-                font-weight: 500;
                 padding: .3rem 1rem;
                 text-align: center;
                 transition: background .7s ease;
                 font-weight: 600;
+                font-family: var(--font-2);
+                font-size: 1.2rem;
                 &:hover {
                     background: rgba(white, .5);
                     color: #000;
                     font-weight: 600;
                 }
             }
+        }
+    }
+}
+/* Main Blog */
+.main-s {
+    h2 {
+        padding: .3rem 1rem;
+        background: var(--dark);
+        color: var(--light);
+        font-size: 1.14rem;
+    }
+    article.articleCard {
+        display: flex;
+        a {
+            padding-right: 1rem;
+            display: block;
+            .imgerContainer {
+                width: 300px;
+                height: 200px;
+                transition: opacity .2s;
+
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                border: 0;
+            }
+        }
+        .bodyContainer {
+            h3, h2 {
+                margin: 0;
+                margin-bottom: .5rem;
+            }
+            p {
+                text-align: justify;
+                margin: 0;
+                margin-bottom: .5rem;
+            }
+            a.btn {}
         }
     }
 }
