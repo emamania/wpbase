@@ -54,8 +54,7 @@ a {
   text-decoration: none; }
 
 a {
-  color: #0f7faf;
-  text-decoration: underline; }
+  color: #0f7faf; }
 
 a:visited {
   color: #0f7faf; }
@@ -73,6 +72,7 @@ a:active {
   outline: 0; }
 
 p {
+  margin-top: 0;
   line-height: 1.5rem;
   font-weight: normal; }
 
@@ -714,16 +714,16 @@ footer {
 
 /* GALERIA */
 /* CATEGORIA */
-.cat .article {
+.cat_card .article {
   display: block;
   position: relative;
   text-align: center; }
-  .cat .article a {
+  .cat_card .article a {
     display: block; }
-  .cat .article a img {
+  .cat_card .article a img {
     display: block;
     width: 100%; }
-  .cat .article a:last-child h2 {
+  .cat_card .article a:last-child h2 {
     margin: 0;
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -738,47 +738,87 @@ footer {
     font-weight: 600;
     font-family: var(--font-2);
     font-size: 1.2rem; }
-    .cat .article a:last-child h2:hover {
+    .cat_card .article a:last-child h2:hover {
       background: rgba(255, 255, 255, 0.5);
       color: #000;
       font-weight: 600; }
 
 /* Main Blog */
-.main-s h2 {
-  padding: .3rem 1rem;
-  background: var(--dark);
-  color: var(--light);
-  font-size: 1.14rem; }
-
-.main-s article.articleCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .main-s article.articleCard a {
-    padding-right: 1rem;
-    display: block; }
-    .main-s article.articleCard a .imgerContainer {
-      width: 300px;
-      height: 200px;
-      -webkit-transition: opacity .2s;
-      -o-transition: opacity .2s;
-      transition: opacity .2s;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
-    .main-s article.articleCard a .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0; }
-  .main-s article.articleCard .bodyContainer h3, .main-s article.articleCard .bodyContainer h2 {
-    margin: 0;
-    margin-bottom: .5rem; }
-  .main-s article.articleCard .bodyContainer p {
-    text-align: justify;
-    margin: 0;
-    margin-bottom: .5rem; }
+.main-s {
+  /* Seccion ASIDE */ }
+  .main-s h2 {
+    padding: .3rem 1rem;
+    background: var(--dark);
+    color: var(--light);
+    font-size: 1.14rem; }
+  .main-s #blog {
+    padding-right: 10px; }
+    .main-s #blog article.articleCard {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 2rem; }
+      .main-s #blog article.articleCard a {
+        padding-right: 1rem;
+        display: block; }
+        .main-s #blog article.articleCard a .imgerContainer {
+          width: 300px;
+          height: 200px;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center; }
+        .main-s #blog article.articleCard a .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          border: 0; }
+      .main-s #blog article.articleCard .bodyContainer {
+        position: relative;
+        min-height: 200px;
+        max-height: 200px; }
+        .main-s #blog article.articleCard .bodyContainer h3, .main-s #blog article.articleCard .bodyContainer h2 {
+          margin: 0;
+          margin-bottom: .5rem; }
+        .main-s #blog article.articleCard .bodyContainer p {
+          text-align: justify;
+          margin: 0;
+          margin-bottom: .5rem;
+          font-size: 15px; }
+        .main-s #blog article.articleCard .bodyContainer a.btn {
+          background: var(--primary-color);
+          color: var(--light);
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          padding: .6rem 1rem;
+          bottom: 0; }
+  .main-s #secondary {
+    padding-left: 30px;
+    border-left: 2px solid #f0f0f0;
+    font-size: 15px; }
+    .main-s #secondary .about-wrapper {
+      padding: 0 0 30px; }
+      .main-s #secondary .about-wrapper .about-image {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+        @media screen and (min-width: 960px) {
+          .main-s #secondary .about-wrapper .about-image {
+            width: calc(100% - 80px);
+            margin: 0 40px 20px;
+            height: auto;
+            padding-bottom: calc(100% - 80px); } }
+    .main-s #secondary .legal-wrapper {
+      border-top: 2px solid #f0f0f0;
+      padding-top: 1rem; }

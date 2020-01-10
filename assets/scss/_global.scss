@@ -17,7 +17,6 @@ a {
 }
 a {
     color: #0f7faf;
-    text-decoration: underline
 }
 a:visited {
     color: #0f7faf
@@ -25,10 +24,10 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-    color: #363940
+    color: #363940;
 }
 a:focus {
-    outline: thin dotted
+    outline: thin dotted;
 }
 a:hover,
 a:active {
@@ -36,6 +35,7 @@ a:active {
 }
 
 p {
+    margin-top: 0;
     line-height: 1.5rem;
     font-weight: normal;
 }
