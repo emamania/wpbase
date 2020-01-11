@@ -1,4 +1,4 @@
-.galery, .cat, .main-s {
+.galery, .featured_cat, .main-s {
     background: #fff!important;
 }
 /* GALERIA */
@@ -6,38 +6,54 @@
 
 }
 /* CATEGORIA */
-.cat_card {
+.featured_cat {
+    .cat-card {
+        max-height: 260px;
+        transition: opacity .2s;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &:hover:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.2);            
+        }
+        
+        a {
+            display: block;
+            position: relative;
+            height: 260px;
+            width: 100%;            
+        }
+    }
     .article {
         display: block;
         position: relative;
         text-align: center;
-        a {display: block;}
-        a {
-            img {
-                display: block;
-                width: 100%;
-            }
-        }
-        a:last-child {            
+        box-shadow: 0 0 20px 0 rgba(62, 28, 131, .3);    
+        a {            
             h2 {
                 margin: 0;
-                background: rgba(0,0,0, .5);
+                background: rgba(#363940, .8);
                 position: absolute;
                 bottom: 0;
                 width: 100%;
                 color: var(--light);
-                padding: .3rem 1rem;
+                padding: .7rem;
                 text-align: center;
                 transition: background .7s ease;
                 font-weight: 600;
                 font-family: var(--font-2);
                 font-size: 1.2rem;
-                &:hover {
-                    background: rgba(white, .5);
-                    color: #000;
-                    font-weight: 600;
-                }
-            }
+            }                    
+        }
+        &:hover a h2 {
+            background: rgba(white, .8);
+            color: #000;
+            font-weight: 600;
         }
     }
 }
@@ -54,6 +70,7 @@
         article.articleCard {
             display: flex;
             margin-bottom: 2rem;
+            /* IMAGEN */
             a {
                 padding-right: 1rem;
                 display: block;
@@ -77,6 +94,7 @@
                     border: 0;
                 }
             }
+            /* CONTENIDO */
             .bodyContainer {
                 position: relative;
                 min-height: 200px;
@@ -92,13 +110,16 @@
                     font-size: 15px;
                 }
                 a.btn {
-                    background: var(--primary-color);
+                    background: var(--gray_alt);
                     color: var(--light);
                     position: absolute;
                     width: 100%;
                     text-align: center;
                     padding: .6rem 1rem;
                     bottom: 0;
+                    &:hover {
+                        background: var(--gray);
+                    }
                 }
             }
         }
