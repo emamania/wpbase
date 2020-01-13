@@ -1,37 +1,55 @@
 /* CABEZERA HEADER BANNER */
-.banner-secundario {
-    padding-top: 80px;
-    background-image: linear-gradient(to right,#9d5299 0%,#de204c 50%,#f69121 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 250px;
-    position: relative;
-    .titulo-banner {
-        position: relative;
-        .hero-text {
-            text-align: center;
-            color: #fff;
-            span{
-                width: 170px;
-                height: 5px;
-                margin: auto;
-                background-color: #fff;
-                display: block;
-                margin: auto;
-                margin-bottom: 20px;
-                border-radius: 10px;
-                opacity: 1;
-            }
+.single {
+    .articleCard {
+        display: block!important;
+        .entry-header {
             h1 {
-                font-size: 3rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                font-family: sans-serif;
+                font-size: 1.7rem;
+                margin-top: 0;
+                margin-bottom: 1.7rem;
+            }
+        }
+        .entry-content {
+            margin: 1.5em 0 0;
+            figure {
+                max-width: 100%;
+                margin: 0;
+                margin-bottom: 1em;
+                img {
+                    display: block;
+                    width: 100%;
+                }
             }
         }
     }
-}
-.single {
-    
+    /* Recent Articles */
+    .recent-articles {
+        display: flex;
+        .articleCard {
+            position: relative;
+            display: block;
+            &:first-child {
+                margin-right: 1rem;
+            }
+            &:last-child {
+                margin-left: 1rem;
+            }
+            a {
+                padding-right: 0!important;
+                .imgerContainer {
+                    height: 260px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    margin-bottom: 1rem;
+                    width: 100%!important;
+                }
+            }
+            .bodyContainer {
+                .btn {
+                    bottom: inherit!important;
+                }
+            }
+        }
+    }
 }
