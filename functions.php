@@ -1,7 +1,7 @@
 <?php
 /*
  * Theme Setup
- */
+*/
 
 if (! function_exists('ema_setup')) :
 
@@ -83,6 +83,8 @@ add_action('after_setup_theme', 'ema_setup');
 /*
  * Add Extra Funcionality
  */
+require get_template_directory() . '/inc/enqueue.php';
+require get_template_directory() . '/inc/image-upload-field-custom-taxonomy.php';
 /* require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 //require get_template_directory() . '/inc/shortcodes.php';
