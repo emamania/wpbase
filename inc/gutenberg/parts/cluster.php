@@ -312,5 +312,4 @@ if ( ! function_exists( 'orbital_register_block_core_latest_posts' ) ) :
 		);
 	}
 	add_action( 'init', 'orbital_register_block_core_latest_posts' );
-
 endif;
