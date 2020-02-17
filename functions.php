@@ -1,4 +1,11 @@
 <?php
+
+
+// add customizer.php file
+require_once('templates/helpers/customizer.php');
+
+
+
 /*
  * Theme Setup
 */
@@ -52,7 +59,7 @@ if (! function_exists('ema_setup')) :
 		);
 
 		add_theme_support('custom-header', $defaults);
-		add_theme_support('custom-background');
+		//add_theme_support('custom-background');
 		add_theme_support('wc-product-gallery-zoom');
 		add_theme_support('wc-product-gallery-lightbox');
 		add_theme_support('wc-product-gallery-slider');
@@ -94,3 +101,8 @@ if (! function_exists('orbital_gutenberg_initialize')) {
 	require get_template_directory() . '/inc/gutenberg/gutenberg.php';
 }
 
+/* Excerpt Length */
+add_filter( 'excerpt_length', 'your_prefix_excerpt_length' );
+function your_prefix_excerpt_length() {
+    return 35;
+}

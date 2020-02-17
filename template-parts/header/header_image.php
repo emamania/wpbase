@@ -41,7 +41,11 @@
 <section class="banner-area">
     <div class="emagrid-fluid">
         <div class="banner">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner.jpg" alt="Entrada a Machupicchu" class="fluid">
+            <?php if(get_theme_mod('header_image')):?>
+                <img src="<?php echo esc_url(get_theme_mod('header_image')); ?>" alt="Entrada a Machupicchu" class="fluid">
+            <?php else: ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner.jpg" alt="Entrada a Machupicchu" class="fluid">
+            <?php endif; ?>
         </div>
         <div class="banner-title text-center">
             <h1 class="text-lg text-light" >Tour a Machu Picchu 1 dia, Tren Inca Rail</h1>
